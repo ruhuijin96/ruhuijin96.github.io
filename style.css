@@ -1,0 +1,74 @@
+header {padding: 8px;      
+height: 150px;
+        color: black;
+        background: url('data.jpeg');
+}
+
+h1 {    font-family: Verdana;
+        font-size: 55px;
+        font-weight: bold;
+        color: black;
+        text-align: center;
+}
+
+body {
+  background: white;
+  margin: 10px;
+  font: 23px Verdana;
+  min-width: 940px;
+}
+body a:visited
+{ 
+color: black;
+}
+
+
+nav ul {
+        padding: 0px;
+        margin: 10px;
+        list-style-type: none;
+        color: black;
+        border-bottom: 3px solid #800000;
+}
+
+nav ul li {
+        float: right;
+        padding: 0px 25px;
+        margin: 0 5px;
+        font: 23px Verdana;
+        font-weight: bold;
+        height: 60px;
+        line-height: 2em;
+}
+
+nav ul li :hover{
+border-bottom: 3px solid #A6ACAF;
+color: #626567;
+      
+}
+
+
+nav a {color: black;
+        text-decoration: none;
+}
+
+
+article{
+  background: white;
+  Padding: 50px;
+}
+
+article section {
+  width: 1160px;
+  margin: 50px;
+  Font-size: 20px;
+  text-align: left;
+  background: white;
+  }
+
+h2{padding: 0px}
+
+.clear {
+  clear: both;
+  }
+
