@@ -1,0 +1,479 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Research | Ruhui Jin</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .research-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        article section.research-content {
+            width: auto;
+            max-width: 1000px;
+            margin: 0 auto;
+            font-size: 20px;
+        }
+
+        .research-content p {
+            line-height: 1.3;
+        }
+
+        .research-content .research-theme {
+            margin: 24px 0;
+        }
+
+        .research-content .research-theme h3 {
+            margin-bottom: 5px;
+        }
+
+.research-content .theme-question {
+    font-style: italic;
+    font-size: 1.05em;
+    margin: 5px 0 16px;
+}
+
+        .research-content .research-project {
+            margin-bottom: 24px;
+        }
+
+        .research-content .research-project h4 {
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+
+        .research-content .research-project p {
+            margin: 4px 0 8px;
+        }
+
+        .research-content .project-links {
+            margin-top: 6px;
+            font-size: 0.95em;
+        }
+
+        .research-content .project-links a + a {
+            margin-left: 20px;
+        }
+
+        /* Research figures */
+
+        .research-content .project-figures {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 10px 0;
+            align-items: flex-start;
+        }
+
+        .research-content .project-figure {
+            flex: 1 1 220px;
+            min-width: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        .research-content .project-figure img {
+            display: block;
+            width: 100%;
+            max-height: 190px;
+            object-fit: contain;
+        }
+
+        .research-content .project-figure figcaption {
+            margin-top: 2px;
+            font-size: 0.82em;
+            line-height: 1.15;
+            color: #333;
+        }
+
+
+/* Continuous vs. discrete OED: separate centered row */
+.research-content .project-figure.full-width {
+    flex: 0 0 100%;
+    width: 100%;
+    margin: 0;
+}
+
+.research-content .project-figure.full-width img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 220px;
+    margin: 0 auto;
+}
+
+.research-content .project-figure.full-width figcaption {
+    margin-top: 0;
+}
+
+/* Enlarge Darcy flow and Lorenz-63 figures */
+.research-content .project-figure.darcy img,
+.research-content .project-figure.lorenz img {
+    max-height: 270px;
+    height: auto;
+}
+
+        .research-content .project-figure.hessian {
+            flex: 1.3 1.3 0;
+        }
+
+        .research-content .project-figure.denoising {
+            flex: 2.2 1 0;
+        }
+
+        .research-content .project-figure.denoising img {
+            max-height: 300px;
+        }
+        
+
+        .research-content .project-figure.single { flex: 0 1 600px; margin: 0 auto; }
+        .research-content .project-figure.single img { max-height: 200px; }
+
+        @media (max-width: 600px) {
+            article section.research-content {
+                padding: 0 12px;
+            }
+
+            .research-content .project-figure {
+                flex-basis: 100%;
+            }
+        }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1 align="center">Ruhui Jin</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="teaching.html">TEACHING</a></li>
+        <li>
+            <a href="publications.html">PUBLICATIONS</a>
+        </li>
+        <li class="active">
+            <a href="research.html">RESEARCH</a>
+        </li>
+        <li><a href="index.html">HOME</a></li>
+    </ul>
+</nav>
+
+<article>
+<section class="research-content">
+
+    
+    <p>
+        My research develops mathematical foundations and
+        computational methods for <br> <strong>data-driven scientific discovery</strong>, toward streamlined computation and reliable learning.
+      </p>
+   <p>
+        Interests include randomized numerical linear
+        algebra, computational inverse problems, experimental design, optimization theory,
+        and scientific machine learning.
+    </p>
+
+    <p>
+        For an overview of data selection philosophies for
+        learning physical systems, check out our
+        <a href="https://arxiv.org/abs/2510.01567">
+            review.
+        </a>
+    </p>
+
+
+    <!-- ======================================= -->
+    <!-- THEME I: SCIENTIFIC DISCOVERY           -->
+    <!-- ======================================= -->
+
+    <div class="research-theme">
+
+        <h3>
+            Theme I. Data selection for reliable learning
+        </h3>
+
+        <p class="theme-question">
+            How can we acquire valuable data and extract
+ information with limited budget?
+        </p>
+
+
+        <!-- Project I.1 -->
+
+        <div class="research-project">
+
+            <h4>Continuous experimental design</h4>
+
+            <p>
+                We formulate optimal experimental design as
+                optimization over the space of probability measures
+                on a continuous design space. Using Wasserstein
+                gradient flows and particle simulations, we
+                identify how experimental importance is distributed
+                across design space. This framework
+                is further extended to adaptive 
+                design for nonlinear inference models.
+            </p>
+
+            <div class="project-figures">
+
+                <figure class="project-figure full-width">
+                    <img
+                        src="images/continuous vs discrete oed.png"
+                        alt="Continuous and discrete experimental design"
+                        loading="lazy">
+                    <figcaption>
+                        Continuous v.s. discrete
+                        experimental design pattern
+                    </figcaption>
+                </figure>
+
+                <figure class="project-figure darcy">
+                    <img
+                        src="images/darcy flow.png"
+                        alt="Optimal design for a Darcy flow model"
+                        loading="lazy">
+                    <figcaption>
+                        Optimal design for linearized Darcy flow model:   
+                        density map highlights valuable injection–source configurations.                    </figcaption>
+                </figure>
+
+                <figure class="project-figure lorenz">
+                    <img
+                        src="images/lorenz_marker.png"
+                        alt="Valuable snapshots highlighted on Lorenz-63 model."
+                        loading="lazy">
+                    <figcaption>
+                       Important snapshots are highlighted on nonlinear Lorenz 63 system.
+                    </figcaption>
+                </figure>
+
+            </div>
+
+            <div class="project-links">
+             <strong>References:</strong>
+             <div>
+                <a href="https://arxiv.org/pdf/2401.07806.pdf">
+                    [Linear model]
+                </a>
+                </div>
+                <div>
+                                <a href="https://arxiv.org/pdf/2411.14332.pdf">
+                    [Nonlinear model]
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- Project I.2 -->
+
+        <div class="research-project">
+
+            <h4>
+                Probabilistic and generative reconstruction
+            </h4>
+
+            <p>
+                We investigate the reconstruction power
+                and develop rigorous criteria for reliable
+               learning from limited or noisy observations.
+                Our work establishes uniqueness guarantees
+                through randomized subsampling of Hessian
+               objects and studies the stability of denoising performance
+                using generative network surrogates.
+            </p>
+
+            <div class="project-figures">
+
+                <figure class="project-figure hessian">
+                    <img
+                        src="images/hessian subsampling.png"
+                        alt="Recovery conditioning under randomized Hessian subsampling"
+                        loading="lazy">
+                    <figcaption>
+                       Hessian conditioning worsens as the number of unknowns grows under a fixed data budget
+                    </figcaption>
+                </figure>
+
+                <figure class="project-figure denoising">
+                    <img
+                        src="images/denoise.png"
+                        alt="Generative denoising with different activation functions"
+                        loading="lazy">
+                    <figcaption>
+                        Generative denoising with different
+                        activation functions
+                    </figcaption>
+                </figure>
+
+            </div>
+
+            <div class="project-links">
+             <strong>References:</strong>
+             <div>
+                <a href="https://arxiv.org/pdf/2403.05935.pdf">
+                    [Unique identification via random subsampling]
+                </a>
+                </div>
+                <div>
+                <a href="https://arxiv.org/pdf/1803.09319.pdf">
+                    [Stable denoising via generative networks]
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ======================================= -->
+    <!-- THEME II: RANDOMIZED COMPUTATION       -->
+    <!-- ======================================= -->
+
+    <div class="research-theme">
+
+        <h3>
+            Theme II. Structure-aware randomized
+            dimension reduction
+        </h3>
+
+        <p class="theme-question">
+            How to exploit mathematical structure
+            to efficiently represent and process high-dimensional
+            data?
+        </p>
+
+
+        <!-- Project II.1 -->
+
+        <div class="research-project">
+
+            <h4>Tensor-structured sketching</h4>
+
+            <p>
+                We design random sketching methods
+                tailored to data with tensor-product structure,
+                substantially reducing computational and
+                storage costs without forming the full
+                high-dimensional data.
+            </p>
+
+            <div class="project-figures">
+
+                <figure class="project-figure single">
+                    <img
+                        src="images/tensor sketching.png"
+                        alt="Tensor-structured sketching via smaller tensor factors"
+                        loading="lazy">
+                    <figcaption>
+                        Efficient sketching through
+                        smaller tensor factors
+                    </figcaption>
+                </figure>
+
+            </div>
+
+            <div class="project-links">
+             <strong>References:</strong>
+             <div>
+                <a href="https://arxiv.org/abs/1909.04801">
+                    [Kronecker fast Johnson-Lindenstrauss embedding]
+                </a>
+                </div>
+                <div>
+                <a href="https://arxiv.org/abs/2010.09791">
+                    [Tensor subGaussian random projections]
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- Project II.2 -->
+
+        <div class="research-project">
+
+            <h4>Scalable tensor compression</h4>
+
+            <p>
+                We develop streaming and implicit manifold-optimization
+                algorithms for symmetric Tucker decomposition,
+                enabling efficient extraction of low-rank
+                representations from higher-order statistics.
+            </p>
+
+            <div class="project-figures">
+
+                <figure class="project-figure single">
+                    <img
+                        src="images/sym tucker.png"
+                        alt="Symmetric Tucker tensor decomposition"
+                        loading="lazy">
+                    <figcaption>
+                        Scalable tensor decomposition: from empirical moment tensor to compressed Tucker format
+                    </figcaption>
+                </figure>
+
+            </div>
+
+            <div class="project-links">
+             <strong>Reference:</strong>
+             <div>
+                <a href="https://arxiv.org/pdf/2204.10824.pdf">
+                    [Scalable Tucker compression]
+                </a>
+                <div>
+            </div>
+
+        </div>
+
+
+        <!-- Project II.3 -->
+
+        <div class="research-project">
+
+            <h4>
+                Randomized algorithms for minimax optimization (ongoing)
+            </h4>
+
+            <p>
+                We develop player-wise sketch-and-project
+                methods for quadratic minimax problems,
+                updating the individual stationarity conditions
+                of competing players. This connects randomized
+                numerical linear algebra with stochastic
+                minimax optimization.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <p>
+        For a complete list of papers, see my
+        <a href="publications.html">publications</a>
+        or
+        <a href="https://scholar.google.com/citations?hl=en&amp;user=QAi6MRQAAAAJ&amp;view_op=list_works">
+            Google Scholar
+        </a>.
+    </p>
+
+</section>
+
+<div class="clear"></div>
+</article>
+
+</body>
+</html>
